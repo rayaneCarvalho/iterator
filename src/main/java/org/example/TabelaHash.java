@@ -47,7 +47,7 @@ public class TabelaHash<K, V> implements Iterable<K> {
     }
 
     public Iterator<K> chaveIterator() {
-        return new ChaveIterator<>(tabela);  // Aqui passamos a tabela para o iterador
+        return new ChaveIterator<>(tabela);
     }
 
     @Override
