@@ -4,7 +4,6 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-// Classe que representa uma Tabela Hash simples
 public class TabelaHash<K, V> implements Iterable<K> {
     private static final int TAMANHO = 10;
     private List<DadosEntrada<K, V>>[] tabela;

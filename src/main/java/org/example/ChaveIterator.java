@@ -3,7 +3,6 @@ package org.example;
 import java.util.Iterator;
 import java.util.List;
 
-// Iterador personalizado para as chaves da tabela hash
 class ChaveIterator<K, V> implements Iterator<K> {
     private int indiceTabela = 0;
     private Iterator<DadosEntrada<K, V>> iteradorLista;

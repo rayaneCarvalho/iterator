@@ -1,6 +1,5 @@
 package org.example;
 
-// Classe interna para armazenar pares chave-valor
 class DadosEntrada<K, V> {
     private K chave;
     private V valor;

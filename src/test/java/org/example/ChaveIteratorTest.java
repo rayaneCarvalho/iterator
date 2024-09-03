@@ -13,10 +13,9 @@ class ChaveIteratorTest {
 
     private List<DadosEntrada<Chave, String>>[] tabela;
 
-    @SuppressWarnings("unchecked")
     @BeforeEach
     void setUp() {
-        tabela = new LinkedList[3];  // Tabela com 3 buckets
+        tabela = new LinkedList[3];
         for (int i = 0; i < tabela.length; i++) {
             tabela[i] = new LinkedList<>();
         }
@@ -40,7 +39,7 @@ class ChaveIteratorTest {
 
     @Test
     void deveRetornarFalsoSeTabelaVazia() {
-        @SuppressWarnings("unchecked")
+
         List<DadosEntrada<Chave, String>>[] tabelaVazia = new LinkedList[3];
         for (int i = 0; i < tabelaVazia.length; i++) {
             tabelaVazia[i] = new LinkedList<>();
@@ -52,7 +51,7 @@ class ChaveIteratorTest {
 
     @Test
     void deveIgnorarBucketsVaziosAoIterar() {
-        tabela[1] = new LinkedList<>(); // Esvazia o bucket do meio
+        tabela[1] = new LinkedList<>();
 
         ChaveIterator<Chave, String> iterador = new ChaveIterator<>(tabela);
         assertTrue(iterador.hasNext());
